@@ -1,11 +1,10 @@
 ﻿using System;
 
-namespace OOP1
+namespace OOP11
 {
     class Program
     {
         static void Main(string[] args)
-        
         {
             Product product1 = new Product();
             product1.Id = 1;
@@ -20,13 +19,18 @@ namespace OOP1
                 CategoryId = 5,
                 UnitInStock = 5,
                 ProductName = "Kalem",
-                UnitPrice = 35
+                UnitPrice = 35,
             };
-
-            //PascalCase //camelCase
-            //case sensitive
+            //case sensitive "Küçük ve büyük harf duyarlılığı"
+            //PascalCase    //camelCase
             ProductManager productManager = new ProductManager();
-            productManager.Add();
+            productManager.Add(product1);
+            Console.WriteLine(product1.ProductName);
+
+            int sayi = 100;
+            productManager.BirseyYap(sayi);
+            Console.WriteLine(sayi);
+                
         }
     }
 }
